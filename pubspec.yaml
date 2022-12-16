@@ -39,6 +39,7 @@ dependencies:
   app_links: ^3.4.1
   provider: ^4.0.4
   url_protocol: ^1.0.0
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:

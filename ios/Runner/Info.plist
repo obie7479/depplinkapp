@@ -55,10 +55,10 @@
 				<key>CFBundleTypeRole</key>
 				<string>Editor</string>
 				<key>CFBundleURLName</key>
-				<string>wallet.etllao.com</string>
+				<string>www.example.com</string>
 				<key>CFBundleURLSchemes</key>
 				<array>
-					<string>e2pay</string>
+					<string>app</string>
 				</array>
 			</dict>
 		</array>

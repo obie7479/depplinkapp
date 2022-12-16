@@ -6,9 +6,8 @@ import 'dart:io';
 import 'package:app_links/app_links.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:url_protocol/url_protocol.dart';
-// import 'web_url_protocol.dart'
-//     if (dart.library.io) 'package:url_protocol/url_protocol.dart';
+import 'package:url_protocol/url_protocol.dart'
+    if (dart.library.io) 'package:url_protocol/url_protocol.dart';
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Please make sure to follow the setup instructions below
@@ -70,10 +69,8 @@ class _MyAppState extends State<MyApp> {
     // Check initial link if app was in cold state (terminated)
     final appLink = await _appLinks.getInitialAppLink();
     if (appLink != null) {
-           print("kkkkkkkkkkkkkkkkkkkkkkkk");
       print('getInitialAppLink: $appLink');
       openAppLink(appLink);
- 
     }
 
     // Handle link when app is in warm state (front or background)
@@ -94,10 +91,10 @@ class _MyAppState extends State<MyApp> {
       initialRoute: "/",
       onGenerateRoute: (RouteSettings settings) {
         Widget routeWidget = defaultScreen();
-
         // Mimic web routing
         final routeName = settings.name;
         if (routeName != null) {
+          print(routeName);
           if (routeName.startsWith('/book/')) {
             // Navigated to /book/:id
             routeWidget = customScreen(
